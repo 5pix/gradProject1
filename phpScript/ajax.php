@@ -73,6 +73,7 @@ if (empty($result)) {
                     file_put_contents($pathToOrderInfo, $separateData);
                     // данные дл я вывода
                     $infoOrder = file_get_contents($pathToOrderInfo);
+                    print ($infoOrder);
                 }
             }
         }
