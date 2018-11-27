@@ -1,0 +1,2 @@
+//админка 
+admin/index.php
