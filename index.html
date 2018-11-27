@@ -7,10 +7,10 @@
     <title>Главная страница
     </title>
     <link rel="stylesheet" href="./css/vendors.min.css">
-    <link rel="stylesheet" href="../css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
   </head>
   <body>
-    <div class="wrapper">
+    <!--<div class="wrapper">
       <div class="maincontent">
         <section class="section hero">
           <div class="container">
@@ -359,49 +359,49 @@
               </div>
             </li>
           </ul>
-        </section>
-        <section class="section order">
+        </section>-->
+        <section style="background-color: #cccccc; background-image: none" class="section order">
           <div class="container">
             <div class="section__title">Закажите доставку</div>
             <div class="order__form">
-              <form class="order__form-tag" id="order-form" action="js/order.js">
+              <form class="order__form-tag" id="order-form">
                 <div class="order__form-col">
                   <div class="order__form-row order__form-row_double">
                     <label class="order__form-block">
                       <div class="order__form-label">Имя</div>
-                      <input class="order__form-input" name="name" type="text" placeholder="">
+                      <input class="order__form-input" name="name" id="name" type="text" placeholder="Иван">
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-label">Телефон</div>
-                      <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
+                      <input class="order__form-input phone-mask" id="phone" name="phone" type="text" placeholder="">
                     </label>
                   </div>
                   <div class="order__form-row order__form-row_double">
                     <label class="order__form-block">
                       <div class="order__form-label">email</div>
-                      <input class="order__form-input" name="email" type="email" placeholder="">
+                      <input class="order__form-input" name="email" id="email" type="email" placeholder="">
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-label">Улица</div>
-                      <input class="order__form-input" name="street" type="text" placeholder="">
+                      <input class="order__form-input" name="street" id="street" type="text" placeholder="">
                     </label>
                   </div>
                   <div class="order__form-row order__form-row_quatro">
                     <label class="order__form-block">
                       <div class="order__form-label">Дом</div>
-                      <input class="order__form-input" name="home" type="text" placeholder="">
+                      <input class="order__form-input" name="home" id="homeNumber" type="text" placeholder="">
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-label">Корпус</div>
-                      <input class="order__form-input" name="part" type="text" placeholder="">
+                      <input class="order__form-input" name="part" id="corps" type="text" placeholder="">
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-label">Квартира</div>
-                      <input class="order__form-input" name="appt" type="text" placeholder="">
+                      <input class="order__form-input" name="appt" id="flatNum" type="text" placeholder="">
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-label">Этаж</div>
-                      <input class="order__form-input" name="floor" type="text" placeholder="">
+                      <input class="order__form-input" name="floor" id="floorNum" type="text" placeholder="">
                     </label>
                   </div>
                 </div>
@@ -409,39 +409,40 @@
                   <div class="order__form-row">
                     <label class="order__form-block">
                       <div class="order__form-label">Комментарий</div>
-                      <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
+                      <textarea class="order__form-input order__form-input_textarea" id="comment" name="comment"></textarea>
                     </label>
                   </div>
                   <div class="order__form-buttons">
                     <div class="order__form-row">
                       <label class="order__radio">
-                        <input class="order__radio-elem" name="payment" type="radio">
+                        <input class="order__radio-elem" name="payment" id="cash" value="1" type="radio">
                         <div class="order__radio-fake"></div>
                         <div class="order__radio-title">Потребуется сдача</div>
                       </label>
                       <label class="order__radio">
-                        <input class="order__radio-elem" name="payment" type="radio">
+                        <input class="order__radio-elem" name="payment" id="card" value="2" type="radio">
                         <div class="order__radio-fake"></div>
                         <div class="order__radio-title">Оплата по карте</div>
                       </label>
                     </div>
                     <div class="order__form-row">
                       <label class="order__radio order__radio_checkbox">
-                        <input class="order__radio-elem" name="callback" type="checkbox">
+                        <input class="order__radio-elem" name="callback" id="notCall" type="checkbox">
                         <div class="order__radio-fake"></div>
                         <div class="order__radio-title">Не перезванивать</div>
                       </label>
                     </div>
                     <div class="order__form-row">
-                      <input class="order__form-button" name="" type="submit" value="Заказать">
-                      <input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">
+                      <input class="order__form-button" name="" id="submit" type="submit" value="Заказать">
+                      <!--<input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">-->
                     </div>
                   </div>
+                        <div id="result"></div>
                 </div>
               </form>
             </div>
           </div>
-        </section>
+        <!--</section>
         <section class="section map">
           <div class="yandex-map" id="map"></div>
           <footer class="footer">
@@ -497,10 +498,11 @@
       <div class="status-popup__inner">
         <div class="status-popup__message error-message">Произошла ошибка</div><a class="status-popup__close btn" href="#">Закрыть</a>
       </div>
-    </div>
+    </div>-->
     <script src="./js/vendors.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="./js/main.min.js"></script>
+    <script src="./js/order.js" type="text/javascript"></script>
     <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>-->
 
   </body>
